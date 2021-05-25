@@ -13,13 +13,13 @@ proc ModulesHelp { } {
 # for Tcl script use only
 set program		Golang	
 set	version		1.16.4
-set	prefix		$env(MODULE_PREFIX)/modules/go/v${version}/src
-set	pkg_prefix	$env(MODULE_PREFIX)/modules/go/v${version}/pkg
+set	prefix		$env(MODULE_PREFIX)/modules/go/v${version}/source
+set	pkg_prefix	$env(MODULE_PREFIX)/modules/go/v${version}/package
 
 module-whatis	"$program version: $version"
 
 setenv			MODULESHOME		$prefix
-prepend-path	GOROOT   		$prefix/bin
+prepend-path	GOROOT   		$prefix/
 prepend-path	PATH   			$prefix/bin
 prepend-path	LD_LIBRARY_PATH	$prefix/lib
 prepend-path	LIBPATH			$prefix/lib
