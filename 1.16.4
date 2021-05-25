@@ -18,7 +18,6 @@ set	pkg_prefix	$env(MODULE_PREFIX)/modules/go/v${version}/package
 
 module-whatis	"$program version: $version"
 
-setenv			MODULESHOME		$prefix
 prepend-path	GOROOT   		$prefix/
 prepend-path	PATH   			$prefix/bin
 prepend-path	LD_LIBRARY_PATH	$prefix/lib
