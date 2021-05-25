@@ -14,17 +14,18 @@ proc ModulesHelp { } {
 set program		Golang	
 set	version		1.16.4
 set	prefix		$env(MODULE_PREFIX)/modules/go/v${version}/src
-set	pkg_prefix		$env(MODULE_PREFIX)/modules/go/v${version}/pkg
+set	pkg_prefix	$env(MODULE_PREFIX)/modules/go/v${version}/pkg
 
 module-whatis	"$program version: $version"
 
-setenv		MODULESHOME		$prefix
+setenv			MODULESHOME		$prefix
+prepend-path	GOROOT   		$prefix/bin
 prepend-path	PATH   			$prefix/bin
-prepend-path	LD_LIBRARY_PATH		$prefix/lib
+prepend-path	LD_LIBRARY_PATH	$prefix/lib
 prepend-path	LIBPATH			$prefix/lib
 prepend-path	MANPATH			$prefix/share/man
 prepend-path	GOPATH			$pkg_prefix/
 prepend-path	PATH   			$pkg_prefix/bin
-prepend-path	LD_LIBRARY_PATH		$pkg_prefix/lib
+prepend-path	LD_LIBRARY_PATH	$pkg_prefix/lib
 prepend-path	LIBPATH			$pkg_prefix/lib
 prepend-path	MANPATH			$pkg_prefix/share/man 
