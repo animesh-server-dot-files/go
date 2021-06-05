@@ -15,7 +15,6 @@ set program             Golang
 set     version         1.16.4
 set     prefix          $env(MODULE_PREFIX)/modules/go/v${version}/source
 set     pkg_prefix      $env(MODULE_PREFIX)/modules/go/v${version}/package
-set-alias       lf      "lf --last-dir-path=$env(HOME)/.lsdir; LASTDIR='cat $env(HOME)/.lsdir'; cd '$LASTDIR'"
 
 module-whatis   "$program version: $version"
 
